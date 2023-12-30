@@ -6,40 +6,49 @@
     text-decoration: none;
 }
 header{
-    background: transparent;
-    color: rgb(248, 201, 48);
+    background-color: aliceblue;  
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     border-bottom: 1px solid snow;
-    z-index: 700;
+    z-index: 100;
 }
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 90%;
     margin: auto;
-    height: 60px;
+    height: 80px;
 }
-header nav .logo {
-    color: aliceblue;
-    font-size: 30px;
-    font-weight: bolder;
+header nav  img {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    right: 40px;
+    left: 20px;
 }
-header nav .logo span {
-    color: rgb(248, 201, 48);
+header nav h1{
+    position: relative;
+    left: 20px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 header nav .links{
     display: flex;
 }
 header nav .links li{
+    right: 80px;
     position: relative;
     margin: 0 15px;
     height: 20px;
     line-height: 20px;
     list-style: none;
+    left: 20px;
 }
 header nav .links li::after{
 position: absolute;
@@ -48,26 +57,57 @@ bottom: 0;
 left: 0;
 width: 0;
 height: 2px;
-background-color: rgb(248, 201, 48);
+background-color: rgb(10, 136, 136);
 transition: 0.4s;
 }
-header nav .links li:hover::after,
+header nav .links li:hover:after,
 header nav .links li.active::after{
     width: 100%;
 }
-header nav .links li a{
-    color: rgb(151, 207, 209);
-    font-size: 17px;
+.box{
+    max-width: 400px;
+    width: 100%;
 }
-header nav .social-links a i{
-    color: rgb(248, 201, 48);
-    font-size: 24px;
-    margin-left: 15px;
-    transition: 0.4s;
+.box .serch-box{
+    position: relative;
+    height: 50px;
+    max-width: 250px;
+    background:rgb(39, 157, 230);
+    margin: auto; 
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.744);
+    border-radius: 25px;
+    bottom: 10px;
+    left: 20px;
 }
-header nav .social-links a i:hover{
-    color: rgb(168, 166, 164);
+#check:checked ~ .serch-box{
+    max-width: 380px;
 }
+.serch-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius:25px;
+    background-color: snow;
+    outline: none;
+    border: none;
+    padding-left: 20px ;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.serch-box .icon{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 10%;
+    background-color: rgb(39, 157, 230);
+    height: 100%;
+    text-align: center;
+    line-height: 50px ;
+    color: snow;
+    font-size: 20px;
+    border-radius: 0 25px 25px 0;
+}
+/* ------------------------------------------MAIN WORK------------------------------------------------------------------------------- */
 .main-section{
     display: flex;
     justify-content: center;
@@ -87,7 +127,7 @@ header nav .social-links a i:hover{
     position: relative;
     height: 100%;
 }
-/* ------------------------------------------MAIN WORK------------------------------------------------------------------------------- */
+
 .main-container{
     display: flex;
     justify-content: center;
